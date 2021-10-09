@@ -1,11 +1,12 @@
 import React, {useState} from "react";
+import {v4 as uuid} from "uuid"
 import Box from "./Box"
 import NewBoxForm from "./NewBoxForm"
 
 const BoxList = () => {
     const [boxes, setBoxes] = useState([]);
-    const addBox = (bgcolor, width, height) => {
-        setBoxes(boxes => [...boxes, {bgcolor, width, height}])
+    const addBox = (newBox) => {
+        setBoxes(boxes => [...boxes, {...newBox, id: uuid()}])
     };
 
     const remove = (e) => {
@@ -17,7 +18,7 @@ const BoxList = () => {
         <div> 
             <h2>Box List</h2>
             <NewBoxForm addBox={addBox} />
-            {boxes.map(({bgcolor, width, height}, id) => 
+            {boxes.map(({id, bgcolor, width, height}) => 
                 <Box
                     key={id}
                     bgcolor={bgcolor} 
