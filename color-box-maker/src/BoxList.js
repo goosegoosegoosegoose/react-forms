@@ -12,7 +12,7 @@ const BoxList = () => {
     const remove = (e) => {
         e.preventDefault();
         e.target.closest("div").remove();
-    }
+    };
 
     return (
         <div> 
