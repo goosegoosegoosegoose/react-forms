@@ -1,3 +1,10 @@
+# What I did
+- made two apps with form inputs, 
+- one that makes a colored rectangle with specified dimensions and color
+- one is just a chores list
+- made 3 components for each (list item, list, form)
+- they're ugly but they work (i think)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
